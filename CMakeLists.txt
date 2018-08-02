@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 PROJECT(sioclient)
+include(GNUInstallDirs)
 
 option(BUILD_SHARED_LIBS "Build the shared library" OFF)
 option(Boost_USE_STATIC_LIBS "Use Boost static version" ON)
@@ -71,14 +72,14 @@ list(APPEND TARGET_LIBRARIES sioclient_tls)
 
 endif()
 
-install(FILES ${ALL_HEADERS} 
-    DESTINATION "${CMAKE_CURRENT_LIST_DIR}/build/include"
+install(FILES ${ALL_HEADERS}
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/sio"
 )
 
 install(TARGETS ${TARGET_LIBRARIES}
-    DESTINATION "${CMAKE_CURRENT_LIST_DIR}/build/lib/${CMAKE_BUILD_TYPE}"
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-install(FILES ${Boost_LIBRARIES} 
-    DESTINATION "${CMAKE_CURRENT_LIST_DIR}/build/lib/${CMAKE_BUILD_TYPE}"
+install(FILES ${Boost_LIBRARIES}
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
