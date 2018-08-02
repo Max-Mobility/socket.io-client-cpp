@@ -38,15 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/jeb/repositories/socket.io-client-cpp/build/include/sio_client.h;/home/jeb/repositories/socket.io-client-cpp/build/include/sio_message.h;/home/jeb/repositories/socket.io-client-cpp/build/include/sio_socket.h")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/jeb/repositories/socket.io-client-cpp/build/include" TYPE FILE FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/sio" TYPE FILE FILES
     "/home/jeb/repositories/socket.io-client-cpp/src/sio_client.h"
     "/home/jeb/repositories/socket.io-client-cpp/src/sio_message.h"
     "/home/jeb/repositories/socket.io-client-cpp/src/sio_socket.h"
@@ -54,42 +46,18 @@ file(INSTALL DESTINATION "/home/jeb/repositories/socket.io-client-cpp/build/incl
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release/libsioclient.a")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release" TYPE STATIC_LIBRARY FILES "/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/libsioclient.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/libsioclient.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release/libsioclient_tls.a")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release" TYPE STATIC_LIBRARY FILES "/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/libsioclient_tls.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/libsioclient_tls.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release/libboost_system.a;/home/jeb/repositories/socket.io-client-cpp/build/lib/Release/libboost_date_time.a;/home/jeb/repositories/socket.io-client-cpp/build/lib/Release/libboost_random.a")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/jeb/repositories/socket.io-client-cpp/build/lib/Release" TYPE FILE FILES
-    "/usr/lib/x86_64-linux-gnu/libboost_system.a"
-    "/usr/lib/x86_64-linux-gnu/libboost_date_time.a"
-    "/usr/lib/x86_64-linux-gnu/libboost_random.a"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES
+    "/usr/local/lib/libboost_system.a"
+    "/usr/local/lib/libboost_date_time.a"
+    "/usr/local/lib/libboost_random.a"
     )
 endif()
 

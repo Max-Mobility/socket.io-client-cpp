@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test.dir/test.cpp.o  -o test libsioclient.a -lpthread -Wl,-Bstatic -lboost_system -lboost_date_time -lboost_random -Wl,-Bdynamic 
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test.dir/test.cpp.o  -o test libsioclient.a -lpthread /usr/local/lib/libboost_system.a /usr/local/lib/libboost_date_time.a /usr/local/lib/libboost_random.a 
