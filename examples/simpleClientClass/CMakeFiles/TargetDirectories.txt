@@ -1,0 +1,9 @@
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/install/strip.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/install/local.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/install.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/list_install_components.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/sioclient.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/rebuild_cache.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/sioclient_tls.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/test.dir
+/home/jeb/repositories/socket.io-client-cpp/examples/simpleClientClass/CMakeFiles/edit_cache.dir
